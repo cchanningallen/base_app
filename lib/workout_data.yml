@@ -1,0 +1,59 @@
+workout_data:
+  movements:
+    1:
+      name: power clean
+      type: strength
+      units:
+        required:
+          - reps
+          - weight
+        optional:
+      mods:
+    2:
+      name: overhead squat
+      type: strength
+      units:
+        required:
+          - reps
+          - weight
+        optional:
+      mods:
+    3:
+      name: muscle up
+      type: gymnastics
+      units:
+        required:
+          - reps
+        optional:
+      mods:
+        - rings
+        - bar
+        - rings strict
+        - bar strict
+    4:
+      name: pull up
+      type: basic
+      units:
+        required:
+          - reps
+        optional:
+          - weight
+      mods:
+        - rings
+        - bar
+        - rings strict
+        - bar strict
+  amrap_example:
+    - order: 1
+      type: amrap
+      score_data:
+        rounds: 5
+        reps: 12
+      activities:
+        - order: 1
+          activity_id:
+          data:
+            reps: 15
+            mod: ab mat
+
+

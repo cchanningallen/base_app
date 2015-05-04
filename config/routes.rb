@@ -10,4 +10,7 @@ Rails.application.routes.draw do
     put 'change_plan', :to => 'registrations#change_plan'
   end
   resources :users
+
+  # For workout builder demo
+  resources :workouts
 end

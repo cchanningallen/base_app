@@ -1,6 +1,7 @@
 <%# add navigation links to this file %>
 <% if user_signed_in? %>
   <ul class="nav navbar-nav">
+    <li data-no-turbolink><%= link_to 'New Workout', new_workout_path %></li>
     <li><%= link_to 'Edit account', edit_user_registration_path %></li>
   </ul>
   <ul class="nav navbar-nav navbar-right">
