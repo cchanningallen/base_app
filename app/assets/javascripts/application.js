@@ -13,9 +13,10 @@
 //= require jquery
 //= require payola
 //= require jquery_ujs
+//= require bootstrap-sprockets
+//= require generated/client-bundle
 //= require turbolinks
 //= require segmentio
-//= require bootstrap-sprockets
 //= require underscore
 //= require backbone
 //= require cocktail

@@ -1,0 +1,26 @@
+{
+  "name": "base_app",
+  "version": "1.0.0",
+  "description": "for using javascript like you fu$%ing mean it.",
+  "main": "server.js",
+  "scripts": {
+    "postinstall": "cd ./client && npm install",
+    "gulp": "cd ./client && npm run gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cchanningallen/base_app.git"
+  },
+  "author": "c. channing allen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cchanningallen/base_app/issues"
+  },
+  "homepage": "https://github.com/cchanningallen/base_app",
+  "devDependencies": {
+    "webpack": "^1.8.11"
+  },
+  "dependencies": {
+    "webpack": "^1.8.11"
+  }
+}
