@@ -7,6 +7,7 @@ import NavItem from 'react-bootstrap/lib/NavItem';
 import FormActions from '../actions/FormActions';
 import FormStore from '../stores/FormStore';
 
+
 const CommentForm = React.createClass({
   displayName: 'CommentForm',
 
@@ -144,6 +145,7 @@ const CommentForm = React.createClass({
     }
     return (
       <div>
+        <Test/>
         <Nav bsStyle="pills" activeKey={this.state.formMode} onSelect={this.handleSelect}>
           <NavItem eventKey={0}>Horizontal Form</NavItem>
           <NavItem eventKey={1}>Stacked Form</NavItem>
