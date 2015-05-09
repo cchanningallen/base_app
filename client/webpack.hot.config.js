@@ -27,6 +27,7 @@ config.devtool = 'eval-source-map';
 // All the styling loaders only apply to hot-reload, not rails
 config.module.loaders.push(
   {test: /\.jsx?$/, loaders: ['react-hot', 'babel'], exclude: /node_modules/},
+  {test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'},
   {test: /\.css$/, loader: 'style-loader!css-loader'},
   {
     test: /\.scss$/,

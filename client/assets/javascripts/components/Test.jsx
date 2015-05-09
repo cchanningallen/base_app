@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Test = React.createClass({
+var Test = React.createClass({
   displayName: 'Test',
 
   propTypes: {
@@ -8,14 +8,14 @@ const Test = React.createClass({
 
   render() {
     return (
-      <div className='test'>
+      <div>
         <h2 className="text-muted">This the way I test</h2>
-        <hr/>
         <h3>Next up:</h3>
         <ul>
-          <li>Use installed Backbone component package successfully. Do any additional changes need to be made? Just import straight into the file? Try it out.</li>
-          <li>Forbid signup and deploy to heroku</li>
           <li>Move all current components + dependencies into /client</li>
+          <li>Forbid signup and deploy to heroku</li>
+          <li>Start using RubyMine + WebStorm</li>
+          <li></li>
           <li></li>
         </ul>
       </div>
