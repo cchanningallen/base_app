@@ -1,8 +1,11 @@
 import React from 'react';
-import ReactBootstrap from 'react-bootstrap';
+import Input from 'react-bootstrap/lib/Input';
 import Backbone from 'backbone';
 import BackboneReactComponentMixin from 'backbone-react-component';
+import moment from 'moment';
 import Workout from 'models/Workout';
+
+
 
 // Workout form base
 var WorkoutForm = React.createClass({
@@ -18,24 +21,31 @@ var WorkoutForm = React.createClass({
     this.getModel().set(e.target.name, e.target.value);
   },
 
+  // Needs its own method because the react-bootstrap-datetimepicker onChange
+  // passes back the datetime string, not an event variable.
+  handleDateChange: function(newDate) {
+    console.log(this.state.model.date)
+    console.log(newDate);
+    this.getModel().set("date", newDate);
+  },
+
   render: function() {
+    console.log(this.state.model.date)
     return(
-      <div className="workout-form-container">
-        <div className="workout-name-container">
-          <ReactBootstrap.Input type="text"
-                                value={this.state.model.name}
-                                label="Name"
-                                name="name"
-                                onChange={this.handleChange} />
+      <form className="row">
+        <div className="col-sm-6">
+          <Input type="text"
+                 value={this.state.model.name}
+                 label="Name"
+                 name="name"
+                 onChange={this.handleChange} />
         </div>
-        <div className="workout-date-container">
-          <ReactBootstrap.Input type="text"
-                                value={this.state.model.date}
-                                label="Date"
-                                name="date"
-                                onChange={this.handleChange} />
+
+        <div className="col-sm-6">
+          <label for="date">Date</label>
+
         </div>
-      </div>
+      </form>
     )
   }
 });
